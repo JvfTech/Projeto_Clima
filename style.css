@@ -1,0 +1,278 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+  visibility: hidden;
+}
+
+body.loaded {
+  visibility: visible;
+  background-color: #333;
+  background-image: url('https://get.wallhere.com/photo/1920x1200-px-Moon-night-simplistic-1538259.jpg');
+  background-size: cover;
+}
+
+/* INICIO H1 */
+h1 {
+  color: #000;
+  margin: 20px 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  transition: color 0.5s;
+}
+
+h1:hover {
+  color: #000;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+h1 {
+  color: #fff;
+  margin: 20px 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  animation: fadeIn 5s;
+}
+
+/* FIM H1 */
+
+/* INICIO BUSCA */
+
+.busca {
+  display: flex;
+  width: 300px;
+  /* Remover o atributo opacity aqui */
+}
+
+.busca #searchInput {
+  display: inline-block;
+  flex: 1;
+  padding: 10px 15px;
+  outline: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  background-color: #fff;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  vertical-align: middle;
+  white-space: nowrap;
+  /* Remover o atributo opacity aqui */
+}
+
+.busca #searchInput:focus {
+  background-color: #fff;
+  color: #333;
+  border-color: #999;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  outline: 0;
+  /* Remover o atributo opacity aqui */
+}
+
+.busca #searchInput::-webkit-input-placeholder {
+  color: #999;
+  font-style: italic;
+}
+
+.busca #searchInput::-moz-placeholder {
+  color: #999;
+  font-style: italic;
+}
+
+.busca #searchInput:-ms-input-placeholder {
+  color: #999;
+  font-style: italic;
+}
+
+.busca #searchInput:-moz-placeholder {
+  color: #999;
+  font-style: italic;
+}
+
+
+/* FINAL BUSCA */
+
+/* INICIO BOTAO  */
+.busca button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #333;
+  border: 0;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+    margin-left: 10px; 
+}
+
+.busca button:hover,
+.busca button:focus {
+  background-color: #444;
+  color: #fff;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+  outline: 0;
+}
+
+.busca button:active {
+  background-color: #555;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.busca button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+ /* FIM BOTAO  */
+
+.busca button:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.resultado {
+    width: 300px;
+    display: none;
+    border: 1px dotted #fff;
+    margin-top: 20px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.titulo {
+    width: 100%;
+    color: #fff;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+}
+
+.info {
+    display: flex;
+    width: 100%;
+}
+
+.info .temp {
+    flex: 1;
+    text-align: center;
+}
+
+.info .vento {
+    flex: 1;
+    text-align: center;
+}
+
+.tempTitulo,
+.ventoTitulo {
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+.tempInfo,
+.ventoInfo {
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+}
+.tempInfo sup {
+    font-size: 15px;
+    font-weight: normal;
+}
+.ventoInfo span {
+    font-size: 15px;
+    font-weight: normal;
+}
+.ventoArea {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    margin: auto;
+    margin-top: 20px;
+    padding-left: 25px;
+    padding-top: 25px;
+}
+.ventoPonto {
+    width: 15px;
+    height: 1px;
+    background-color: #fff;
+    transform-origin: left;
+}
+
+.aviso {
+  color: #ff0066; /* cor rosa brilhante */
+  padding-top: 20px;
+  transition: color 0.5s ease-in-out; /* animação de transição de cor ao passar o mouse */
+}
+
+.aviso:hover {
+  color: #fff; /* cor branca ao passar o mouse */
+}
+
+footer {
+  /* outras propriedades aqui */
+  font-weight: bold; /* texto em negrito */
+  animation: slideInFromLeft 1s, rainbow 5s linear infinite;
+}
+
+/* cria a animação personalizada */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* cria a animação personalizada */
+@keyframes rainbow {
+  0% {
+    color: red;
+  }
+  20% {
+    color: orange;
+  }
+  40% {
+    color: yellow;
+  }
+  60% {
+    color: green;
+  }
+  80% {
+    color: blue;
+  }
+  100% {
+    color: purple;
+  }
+}
+
+}
+
+
+
