@@ -21,7 +21,6 @@ body.loaded {
   background-size: cover;
 }
 
-/* INICIO H1 */
 h1 {
   color: #000;
   margin: 20px 0;
@@ -52,14 +51,9 @@ h1 {
   animation: fadeIn 5s;
 }
 
-/* FIM H1 */
-
-/* INICIO BUSCA */
-
 .busca {
   display: flex;
   width: 300px;
-  /* Remover o atributo opacity aqui */
 }
 
 .busca #searchInput {
@@ -86,7 +80,6 @@ h1 {
   border-color: #999;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   outline: 0;
-  /* Remover o atributo opacity aqui */
 }
 
 .busca #searchInput::-webkit-input-placeholder {
@@ -109,10 +102,6 @@ h1 {
   font-style: italic;
 }
 
-
-/* FINAL BUSCA */
-
-/* INICIO BOTAO  */
 .busca button {
   display: inline-block;
   padding: 10px 20px;
@@ -148,7 +137,6 @@ h1 {
   opacity: 0.5;
   cursor: not-allowed;
 }
- /* FIM BOTAO  */
 
 .busca button:hover {
     background-color: rgba(0, 0, 0, 0.1);
@@ -235,7 +223,6 @@ h1 {
 }
 
 footer {
-  /* outras propriedades aqui */
   font-weight: bold; /* texto em negrito */
   animation: slideInFromLeft 1s, rainbow 5s linear infinite;
 }
